@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF Pro Display'), url('~assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf') format('truetype'),
+    url('~assets/fonts/FontsFree-Net-SFProDisplay-Bold.ttf') format('truetype');
+}
+
+*,
+body,
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'SF Pro Display';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0em;
+  text-align: left;
+}

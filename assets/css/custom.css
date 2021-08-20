@@ -1,0 +1,227 @@
+/* General Classes */
+.c-auth-page {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.c-auth-page::after {
+  content: '';
+  position: absolute;
+  top: -21%;
+  left: 0%;
+  right: 0%;
+  width: 100vw;
+  height: 75%;
+  background-color: #f7fafc;
+  transform: skewY(-12.5deg);
+  transform-origin: 50% 50%;
+}
+
+.c-auth-page::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 25.5%;
+  left: 1.5%;
+  width: 11%;
+  height: 5%;
+  background-color: #81e9ff;
+  transform: skewY(-12.5deg);
+  transform-origin: 0 0;
+}
+
+.c-auth-page-inner-div {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  height: 100%;
+}
+
+.c-auth-page-inner-div::before {
+  content: '';
+  position: absolute;
+  bottom: 21.5%;
+  left: 0%;
+  width: 22%;
+  height: 5%;
+  background-color: #0c00fa80;
+  transform: skewY(-12.5deg);
+  transform-origin: 0 0;
+}
+
+.c-auth-page-inner-div::after {
+  content: '';
+  position: absolute;
+  bottom: 57%;
+  right: 0%;
+  width: 22%;
+  height: 5%;
+  background-color: #0c00fa80;
+  transform: skewY(-12.5deg);
+  transform-origin: 0 0;
+}
+.c-auth-form {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12), 0px 15px 35px rgba(60, 66, 87, 0.08);
+  border-radius: 4px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 48px 68px 72px;
+  flex-basis: 88.5%;
+}
+
+.c-auth-form-container {
+  position: relative;
+  top: -8.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 37.5%;
+  height: 73%;
+}
+
+/* Form General*/
+
+.c-form-heading {
+  font-family: 'SF Pro Display';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #3c4257;
+}
+/* Sizing  in percentage*/
+.c-width-5 {
+  width: 5%;
+}
+.c-width-10 {
+  width: 10.8%;
+}
+
+.c-width-20 {
+  width: 20%;
+}
+
+.c-width-30 {
+  width: 30%;
+}
+.c-width-40 {
+  width: 40%;
+}
+.c-width-50 {
+  width: 50%;
+}
+
+.c-width-100 {
+  width: 100%;
+}
+
+.c-height-5 {
+  height: 5%;
+}
+.c-height-10 {
+  height: 10%;
+}
+
+.c-height-20 {
+  height: 20%;
+}
+
+.c-height-30 {
+  height: 30%;
+}
+.c-height-40 {
+  height: 40%;
+}
+.c-height-50 {
+  height: 50%;
+}
+
+/* Margin utilities in percentage*/
+.c-ml-5_p {
+  margin-left: 3.5%;
+}
+
+.c-m-10_p {
+  margin: 10%;
+}
+.c-mr-10_p {
+  margin-right: 10%;
+}
+.c-ml-10_p {
+  margin-left: 10%;
+}
+.c-mt-5_p {
+  margin-top: 2%;
+}
+.c-mt-10_p {
+  margin-top: 10%;
+}
+.c-mt-20_p {
+  margin-top: 20%;
+}
+
+.c-mb-10_p {
+  margin-bottom: 10%;
+}
+.c-mb-7_p {
+  margin-bottom: 7%;
+}
+
+/* Variants */
+.c-primary {
+  color: #635cff;
+}
+.c-links {
+  color: #635cff;
+}
+
+.c-links:hover {
+  text-decoration: underline;
+  color: #7f78fa;
+  cursor: pointer;
+}
+
+/* Bootstrap */
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #635cff;
+  background-color: #635cff;
+}
+.btn {
+  padding: 0.745rem 0.75rem;
+}
+.btn-primary,
+.btn-primary:disabled {
+  border-color: #635cff;
+  background-color: #635cff;
+}
+.btn-primary:hover {
+  border-color: #7f78fa;
+  background-color: #7f78fa;
+}
+
+.form-control {
+  padding: 1.395rem 0.75rem;
+}
+input[type='password']::placeholder {
+  position: absolute;
+  font-size: 2.1rem;
+  bottom: 27%;
+  color: #1a1f36;
+}
+/* Fonts */
+.c-fontsize-xsm {
+  font-size: 10px;
+}
+.c-fontsize-sm {
+  font-size: 14px;
+}
