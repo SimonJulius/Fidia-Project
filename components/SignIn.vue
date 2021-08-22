@@ -7,7 +7,7 @@
 
     <b-form-group class="c-mb-7_p c-width-100" id="input-group-2" label="Password" label-for="input-2">
       <span class="forgot-password c-links">Forgot your password?</span>
-      <div class="password-icons">
+      <div class="password-icons c-icon-grey">
         <font-awesome-icon @click="toggleVisibility" v-if="isVisible" icon="eye" />
         <font-awesome-icon @click="toggleVisibility" v-if="!isVisible" icon="eye-slash" />
       </div>
@@ -77,6 +77,5 @@ export default {
   position: absolute;
   bottom: 14%;
   right: 3%;
-  color: #a3acb9;
 }
 </style>

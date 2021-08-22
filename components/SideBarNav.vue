@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="className">
     <div class="nav-options_dropdown"><h3>Store Name</h3></div>
     <div class="homeLink">
       Home
@@ -30,7 +30,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    className: {
+      type: String
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped></style>
