@@ -51,10 +51,10 @@
           <div v-for="(item, index) in items" :key="index" class="c-table-item d-flex c-border-bottom-secondary align-item-center c-py-0_5">
             <div class="amount c-width-20 d-flex justify-content-between">
               <b-form-checkbox
-                :id="`${item.description}`"
+                :id="`checkbox-${index + 3}`"
                 v-model="status"
-                :name="`checkbox-${index + 4}`"
-                value="accepted"
+                :name="`checkbox-${index + 3}`"
+                :value="item.description"
                 unchecked-value="not_accepted"
               /><span class="c-fontsize-sm"> {{ item.amount }}</span>
               <div class="status c-fs-12">Succeeded <span class="check-mark">&#10003;</span></div>

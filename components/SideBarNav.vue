@@ -1,11 +1,14 @@
 <template>
   <div :class="className">
-    <div class="nav-options_dropdown"><h3>Store Name</h3></div>
+    <div class="nav-options_dropdown">
+      <h3><img src="~assets/icons/store.svg" alt="store icon" /> Store Name</h3>
+    </div>
     <div class="homeLink">
+      <img src="~assets/icons/home.svg" alt="home icon" />
       Home
     </div>
     <ul class="customers-interactions">
-      <li>Payments</li>
+      <li class="c-active"><img src="~assets/icons/payment.svg" alt="store icon" /> Payments</li>
       <li>Reviews</li>
       <li>Disputes</li>
       <li>Top-ups</li>
@@ -15,16 +18,16 @@
       <li>All transactions</li>
     </ul>
     <ul class="infos">
-      <li>Balances</li>
-      <li>Customers</li>
-      <li>Connected accounts</li>
-      <li>Products</li>
-      <li>Reports</li>
+      <li><img src="~assets/icons/arrow-up-down.svg" alt="arrows icon" /> Balances</li>
+      <li><img src="~assets/icons/customer.svg" alt="store icon" /> Customers</li>
+      <li><img src="~assets/icons/connected.svg" alt="store icon" /> Connected accounts</li>
+      <li><img src="~assets/icons/product.svg" alt="store icon" /> Products</li>
+      <li><img src="~assets/icons/report.svg" alt="store icon" /> Reports</li>
     </ul>
     <ul class="others">
-      <li>Developers</li>
-      <li>View test data</li>
-      <li>Settings</li>
+      <li><img src="~assets/icons/developer.svg" alt="store icon" /> Developers</li>
+      <li class="d-flex"><b-form-checkbox v-model="checked" name="check-button" switch /> View test data</li>
+      <li><img src="~assets/icons/settings.svg" alt="store icon" /> Settings</li>
     </ul>
   </div>
 </template>
@@ -39,4 +42,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

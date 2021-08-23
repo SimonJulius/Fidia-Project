@@ -353,3 +353,7 @@ input[type='password']::placeholder {
 .c-icon-grey {
   color: #a3acb9;
 }
+
+.c-active {
+  color: #7f78fa;
+}
