@@ -67,6 +67,13 @@
           </div>
         </div>
       </div>
+      <div class="pagination c-pr-3 c-pl-2 c-py-1  d-flex align-items-center">
+        <div class="counts">{{ items.length }} Results</div>
+        <div class="ml-auto control">
+          <buton class="btn btn-outline-secondary" disabled>Previous</buton>
+          <buton class="btn btn-outline-secondary">Next</buton>
+        </div>
+      </div>
     </div>
   </div>
 </template>
