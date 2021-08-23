@@ -54,7 +54,7 @@
             value="accepted"
             unchecked-value="not_accepted"
           >
-            <div class="c-fontsize-sm">AMOUNT</div>
+            <div class="c-fontsize-sm c-ml-1 ">AMOUNT</div>
           </b-form-checkbox>
           <div class="c-fontsize-sm c-width-35 c-ml-5_p">DESCRIPTION</div>
           <div class="c-fontsize-sm c-width-15 ml-auto">CUSTOMER</div>
@@ -94,12 +94,10 @@
 
 <script>
 import SideBarNav from '~/components/SideBarNav.vue'
-import TableComponent from '~/components/TableComponent.vue'
 
 export default {
   components: {
-    SideBarNav,
-    TableComponent
+    SideBarNav
   },
   data() {
     return {
