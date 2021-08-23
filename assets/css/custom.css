@@ -115,7 +115,11 @@
   flex-direction: column;
   align-items: flex-start;
   min-height: 100%;
+  color: #1a1f36;
+  line-height: 1.872rem;
   padding: 12px 20px 0px;
+  font-style: normal;
+  font-weight: normal;
 }
 .c-dashboard-right {
   flex-basis: 80%;
@@ -249,8 +253,18 @@
   margin-bottom: 7%;
 }
 
+/* Margin utilities in rem where 1 unit = 1.162rem */
+.c-ml-1_7 {
+  margin-left: 1.9754rem;
+}
+.c-my-1 {
+  margin-top: 1.162rem;
+  margin-bottom: 1.162rem;
+}
 /* Padding utilities in rem where 1 unit = 1.162rem */
-
+.c-pr-0_5 {
+  padding-right: 0.81rem;
+}
 .c-pl-2 {
   padding-left: 2.324rem;
 }
@@ -340,6 +354,10 @@ input[type='password']::placeholder {
 
 .c-fs-16 {
   font-size: 16px;
+}
+
+.c-fs-18 {
+  font-size: 18px;
 }
 /* Typography */
 .c-dashboard-header {
