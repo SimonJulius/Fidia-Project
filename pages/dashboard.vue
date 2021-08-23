@@ -47,18 +47,18 @@
       <div class="content-table c-pr-3 c-pl-2">
         <div class="table-head c-fontsize-xsm d-flex c-py-1 c-border-bottom-secondary">
           <b-form-checkbox
-            class="c-fontsize-xsm c-width-20"
+            class="c-fs-12 c-width-20"
             id="checkbox-1"
             v-model="status"
             name="checkbox-1"
             value="accepted"
             unchecked-value="not_accepted"
           >
-            <div class="c-fontsize-sm c-ml-1 ">AMOUNT</div>
+            <div class="c-ml-1  c-fs-12">AMOUNT</div>
           </b-form-checkbox>
-          <div class="c-fontsize-sm c-width-35 c-ml-5_p">DESCRIPTION</div>
-          <div class="c-fontsize-sm c-width-15 ml-auto">CUSTOMER</div>
-          <div class="c-fontsize-sm c-width-7_5 ml-3">DATE</div>
+          <div class="c-fs-12 c-width-35 c-ml-5_p">DESCRIPTION</div>
+          <div class="c-fs-12 c-width-15 ml-auto">CUSTOMER</div>
+          <div class="c-fs-12 c-width-10 ml-3">DATE</div>
           <div class="c-width-5"></div>
         </div>
         <div class="table-body">
