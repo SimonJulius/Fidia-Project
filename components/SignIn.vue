@@ -20,7 +20,7 @@
       </b-form-checkbox>
     </b-form-group>
 
-    <b-button class="c-mb-7_p c-height-20 c-width-100" type="submit" variant="primary">Submit</b-button>
+    <b-button class="c-mb-7_p c-height-20 c-width-100" type="submit" variant="primary" @click="goToDashboard">Continue</b-button>
 
     <p class="c-width-100 c-links sso">Use single sign-on (SSO) instead</p>
   </div>
@@ -55,6 +55,9 @@ export default {
     },
     toggleVisibility() {
       this.isVisible = !this.isVisible
+    },
+    goToDashboard() {
+      this.$router.push(`/dashboard`)
     }
   }
 }

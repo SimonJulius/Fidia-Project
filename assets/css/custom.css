@@ -104,7 +104,7 @@
 /* Dashboard Generals */
 .c-dashboard {
   display: flex;
-  height: 100vh;
+  height: 100%;
 }
 
 .c-dashboard-left {
@@ -114,6 +114,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  height: 100%;
   padding: 12px 20px 0px;
 }
 .c-dashboard-right {
@@ -123,7 +124,6 @@
 /* Form General*/
 
 .c-form-heading {
-  font-family: 'SF Pro Display';
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -135,20 +135,23 @@
 
 /* Custom Table CSS */
 
-.c-table-item {
+/* .c-table-item {
   display: flex;
 }
 
 .c-table-item > .customer {
   margin-left: auto;
-}
+} */
 
 /* Sizing  in percentage*/
 .c-width-5 {
   width: 5%;
 }
+.c-width-8 {
+  width: 8%;
+}
 .c-width-10 {
-  width: 10.8%;
+  width: 10%;
 }
 
 .c-width-15 {
@@ -208,8 +211,12 @@
   border-bottom: 1px solid #e3e8ee;
 }
 /* Margin utilities in percentage*/
-.c-ml-5_p {
+.c-ml-3_5_p {
   margin-left: 3.5%;
+}
+
+.c-ml-5_p {
+  margin-left: 5%;
 }
 
 .c-m-10_p {
@@ -322,9 +329,19 @@ input[type='password']::placeholder {
   font-size: 14px;
 }
 
+.c-fs-12 {
+  font-size: 12px;
+}
+
+.c-fs-13 {
+  font-size: 13px;
+}
+
+.c-fs-16 {
+  font-size: 16px;
+}
 /* Typography */
 .c-dashboard-header {
-  font-family: 'SF Pro Display';
   font-weight: 800;
   font-size: 1.85rem;
   line-height: 33px;

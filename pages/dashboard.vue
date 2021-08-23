@@ -18,9 +18,7 @@
         <h3 class="c-dashboard-header">Payments</h3>
         <div class="ctas ml-auto">
           <div class="fiter p-1 btn btn-outline-secondary"><font-awesome-icon icon="filter" />Filter</div>
-          <div class="export p-1 btn btn btn-outline-secondary mx-1">
-            <font-awesome-icon icon="export" /> <span class="export-icon">&#8599;</span>Exports
-          </div>
+          <div class="export p-1 btn btn btn-outline-secondary mx-1"><span class="export-icon">&#8599;</span>Exports</div>
           <div class="create-payment p-1 btn btn-primary"><font-awesome-icon icon="plus" /> Create Payment</div>
         </div>
       </div>
@@ -35,7 +33,7 @@
       <div class="content-table c-pr-3 c-pl-2">
         <div class="table-head c-fontsize-xsm d-flex c-py-1 c-border-bottom-secondary">
           <b-form-checkbox
-            class="c-fontsize-xsm c-width-20 border border-primary"
+            class="c-fontsize-xsm c-width-20"
             id="checkbox-1"
             v-model="status"
             name="checkbox-1"
@@ -44,29 +42,28 @@
           >
             <div class="c-fontsize-sm">AMOUNT</div>
           </b-form-checkbox>
-          <div class="c-fontsize-sm c-width-35 border border-primary">DESCRIPTION</div>
-          <div class="c-fontsize-sm c-width-15">CUSTOMER</div>
-          <div class="c-fontsize-sm c-width-15">DATE</div>
-          <div class="c-width-10"></div>
+          <div class="c-fontsize-sm c-width-35 c-ml-5_p">DESCRIPTION</div>
+          <div class="c-fontsize-sm c-width-15 ml-auto">CUSTOMER</div>
+          <div class="c-fontsize-sm c-width-7_5 ml-3">DATE</div>
+          <div class="c-width-5"></div>
         </div>
         <div class="table-body">
-          <div class="c-table-item d-flex c-border-bottom-secondary c-py-0_5">
-            <div class="amount c-width-20 d-flex justify-content-between border border-primary">
+          <div v-for="(item, index) in items" :key="index" class="c-table-item d-flex c-border-bottom-secondary align-item-center c-py-0_5">
+            <div class="amount c-width-20 d-flex justify-content-between">
               <b-form-checkbox
-                class="c-fontsize-xsm"
-                id="checkbox-2"
+                :id="`${item.description}`"
                 v-model="status"
-                name="checkbox-2"
+                :name="`checkbox-${index + 4}`"
                 value="accepted"
                 unchecked-value="not_accepted"
-              />US$352.22
-              <div class="status border border-primary">Succeeded <span class="check-mark">&#10003;</span></div>
+              /><span class="c-fontsize-sm"> {{ item.amount }}</span>
+              <div class="status c-fs-12">Succeeded <span class="check-mark">&#10003;</span></div>
             </div>
 
-            <div class="description c-width-35">fe3d8216-58f9-4dc1-aaef-2f19463b5258</div>
-            <div class="customer-info border border-primary c-width-15">hefovo87@ereyemind...</div>
-            <div class="date c-width-15">7 Jul, 14:04</div>
-            <span class="hamburger c-width-10">&#8943;</span>
+            <div class="description c-width-35 c-fs-13 c-ml-3_5_p">{{ item.description }}</div>
+            <div class="customer-info c-width-15 ml-auto c-fontsize-sm">{{ item.customerEmail }}</div>
+            <div class="date c-width-10 ml-3 c-fontsize-sm">{{ item.date }}</div>
+            <span class="hamburger c-width-5 d-flex justify-content-end pr-4">&#8943;</span>
           </div>
         </div>
       </div>
@@ -85,32 +82,54 @@ export default {
   },
   data() {
     return {
-      items: [
-        {
-          amount: 'first',
-          description: 'second',
-          customer: 'customer',
-          date: 'date'
-        },
-        {
-          amount: 'Aburo',
-          description: 'egbon',
-          customer: 'Janikin',
-          date: 'Dab'
-        },
-        {
-          amount: 'tana',
-          description: 'yara',
-          customer: 'fagbaha',
-          date: 'jadabaha'
-        },
-        {
-          amount: 'migaha',
-          description: 'sagah',
-          customer: 'jadala',
-          date: 'miayagsg'
-        }
-      ]
+      items: [],
+      status: 'succeeded'
+    }
+  },
+  created() {
+    this.getItems(16)
+  },
+
+  methods: {
+    getItems(numberOfItems) {
+      for (let item = 0; item < numberOfItems; ++item) {
+        const amount = 'US$' + (Math.random() * 263).toFixed(2)
+        const customerEmail = this.$faker().internet.email()
+        const date = this.$luxon(
+          this.$faker()
+            .date.past()
+            .toISOString(),
+          { input: 'iso', output: { format: `MMM dd, hh:mm` } }
+        )
+        const description =
+          Math.random()
+            .toString(36)
+            .substring(2, 10) +
+          '-' +
+          Math.random()
+            .toString(36)
+            .substring(2, 6) +
+          '-' +
+          Math.random()
+            .toString(36)
+            .substring(2, 6) +
+          '-' +
+          Math.random()
+            .toString(36)
+            .substring(2, 6) +
+          '-' +
+          Math.random()
+            .toString(36)
+            .substring(2, 15) +
+          Math.random()
+            .toString(36)
+            .substring(2, 3)
+
+        const item = { amount, customerEmail, description, date }
+
+        this.items.push(item)
+      }
+      console.log(this.items)
     }
   }
 }
@@ -128,5 +147,19 @@ export default {
 .content-nav {
   border-bottom: 1px solid #e3e8ee;
   padding-bottom: 0.48%;
+}
+.status {
+  background-color: #cbf4c9;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 5.5rem;
+  padding: 0px 4px;
+}
+.customer-info {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>
