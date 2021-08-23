@@ -265,6 +265,9 @@
 .c-pr-0_5 {
   padding-right: 0.81rem;
 }
+.c-pr-0_15 {
+  padding-right: 0.2743rem;
+}
 .c-pl-2 {
   padding-left: 2.324rem;
 }
@@ -273,27 +276,39 @@
   padding-right: 3.486rem;
 }
 
-.c-pt-1_5 {
-  padding-top: 1.743rem;
+.c-pt-1_2 {
+  padding-top: 2.2944rem;
 }
 .c-pt-4 {
   padding-top: 4.648rem;
 }
 
 .c-py-1 {
-  padding-top: 1.162rem;
-  padding-bottom: 1.162rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
 }
 .c-py-0_5 {
+  padding-top: 0.381rem;
+  padding-bottom: 0.381rem;
+}
+
+.c-px-0_5 {
   padding-top: 0.581rem;
   padding-bottom: 0.581rem;
 }
+
+.c-py-0_15 {
+  height: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 /* Variants */
 .c-primary {
-  color: #635cff;
+  color: #7f78fa;
 }
 .c-links {
-  color: #635cff;
+  color: #5469d4;
 }
 
 .c-links:hover {

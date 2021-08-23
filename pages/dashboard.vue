@@ -14,12 +14,18 @@
         </div>
       </div>
 
-      <div class="d-flex c-pr-3 c-pl-2 c-pt-1_5">
+      <div class="d-flex c-pr-3 c-pl-2 c-pt-1_2">
         <h3 class="c-dashboard-header">Payments</h3>
-        <div class="ctas ml-auto">
-          <div class="fiter p-1 btn btn-outline-secondary"><font-awesome-icon icon="filter" />Filter</div>
-          <div class="export p-1 btn btn btn-outline-secondary mx-1"><span class="export-icon">&#8599;</span>Exports</div>
-          <div class="create-payment p-1 btn btn-primary"><font-awesome-icon icon="plus" /> Create Payment</div>
+        <div class="ctas d-flex ml-auto">
+          <div class="c-py-0_15 fiter c-px-0_5 btn btn-outline-secondary">
+            <img src="~assets/icons/funnel.svg" alt="funnel-icon" class="c-pr-0_15" /> Filter
+          </div>
+          <div class="c-py-0_15 export p-1 btn btn btn-outline-secondary mx-1">
+            <span class="export-icon c-pr-0_15">&#8599;</span>Exports
+          </div>
+          <div class="c-py-0_15 create-payment  btn btn-primary">
+            <img src="~assets/icons/plus.svg" alt="funnel-icon" class="c-pr-0_15" /> Create Payment
+          </div>
         </div>
       </div>
       <div class="main-content mt-2 c-pr-3 c-pl-2">
